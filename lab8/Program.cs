@@ -104,7 +104,7 @@ namespace lab8
                 arr[i] = Convert.ToDouble(Console.ReadLine());
             }
             Console.Write("e = ");
-            double e = Console.ReadLine();
+            double e = Convert.ToDouble(Console.ReadLine());
         }
     }
 }
