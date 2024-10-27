@@ -96,6 +96,15 @@ namespace lab8
     {
         static void Main(string[] args)
         {
+            Console.Write("Numbers count = ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            double[] arr = new double[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = Convert.ToDouble(Console.ReadLine());
+            }
+            Console.Write("e = ");
+            double e = Console.ReadLine();
         }
     }
 }
