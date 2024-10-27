@@ -106,6 +106,12 @@ namespace lab8
             Console.Write("e = ");
             double e = Convert.ToDouble(Console.ReadLine());
             ClassSum mcl = new ClassSum(e / 10, arr);
+            Console.WriteLine("Input data: ");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+            Console.WriteLine();
             Console.WriteLine("Result = " + mcl.GetSum().ToString("F6"));
             Console.ReadLine();
         }
