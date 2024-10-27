@@ -31,6 +31,24 @@ namespace lab8
             }
         }
 
+        /// <summary>
+        /// get 1/sqrt(x)
+        /// </summary>
+        /// <param name="x">parametr >= 0</param>
+        /// <returns></returns> 
+        public double GetSqrt(double x)
+        {
+            if (x <= 0.2) return 0;
+            double y0 = 1 / x;
+            double y1 = 3 * y0 / 2 - x * y0 * y0 * y0 / 2;
+            while (Math.Abs(y1 - y0) > eps)
+            {
+                y0 = y1;
+                y1 = 3 * y0 / 2 - x * y0 * y0 * y0 / 2;
+            }
+            return Math.Abs(y1);
+        }
+
     }
     internal class Program
     {
