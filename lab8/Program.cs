@@ -50,6 +50,48 @@ namespace lab8
         }
 
     }
+
+    /// <summary>
+    /// Calculate sum
+    /// </summary>
+    public class ClassSum : FuncCalc
+    {
+        private double[] cArray;
+
+        public ClassSum(double e, double[] vec) : base(e)
+        {
+            cArray = vec;
+        }
+
+        public double[] Vector
+        {
+            get
+            {
+                return cArray;
+            }
+            set
+            {
+                cArray = value;
+            }
+        }
+
+        /// <summary>
+        /// Calculate 1/sqrt(x1) + 1/sqrt(x2) + ...
+        /// </summary>
+        /// <returns></returns>
+        public double GetSum()
+        {
+            if (cArray == null) { return 0; }
+            double e = eps;
+            if (cArray != null && cArray.Length != 0)
+            {
+                eps /= cArray.Length;
+            }
+            double s = cArray.Select(el => GetSqrt(el)).Sum();
+            eps = e;
+            return s;
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
