@@ -105,6 +105,9 @@ namespace lab8
             }
             Console.Write("e = ");
             double e = Convert.ToDouble(Console.ReadLine());
+            ClassSum mcl = new ClassSum(e, arr);
+            Console.WriteLine("Result = " + mcl.GetSum().ToString("%2F"));
+            Console.ReadLine();
         }
     }
 }
